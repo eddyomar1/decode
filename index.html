@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>des</title>
+<style>
+
+#ct{opacity: 0; position: fixed; left: 1000px;}
+
+</style>
+</head>
+<body align="center">
+
+<h1 id="b"></h1>
+<input type="text" value="" id="a">
+    <select id="kf">
+
+        <option value="co">codificar</option>
+        <option value="de">decodificar</option>
+
+    </select>
+
+    <button onclick="copi()">copiar</button>
+    <input type="text" id="ct">
+    
+
+
+<script>
+
+
+
+var k = function(){
+var inp = document.getElementById("a").value;
+var out = "";
+
+for(var x = 0;x<inp.length;x++){
+   
+if(inp.charAt(x)=="."){out += "a"}
+// if(inp.charAt(x)=="."){out += "a"}
+if(inp.charAt(x)=="1"){out += "b"}
+if(inp.charAt(x)=="2"){out += "c"}
+if(inp.charAt(x)=="4"){out += "e"}
+if(inp.charAt(x)=="3"){out += "d"}
+if(inp.charAt(x)=="5"){out += "f"}
+if(inp.charAt(x)=="6"){out += "g"}
+if(inp.charAt(x)=="7"){out += "h"}
+if(inp.charAt(x)=="8"){out += "i"}
+if(inp.charAt(x)=="9"){out += "j"}
+if(inp.charAt(x)=="!"){out += "k"}
+if(inp.charAt(x)=="@"){out += "l"}
+if(inp.charAt(x)=="#"){out += "m"}
+if(inp.charAt(x)=="$"){out += "n"}
+if(inp.charAt(x)=="%"){out += "ñ"}
+if(inp.charAt(x)=="&"){out += "o"}
+if(inp.charAt(x)=="/"){out += "p"}
+if(inp.charAt(x)=="("){out += "q"}
+if(inp.charAt(x)==")"){out += "r"}
+if(inp.charAt(x)=="="){out += "s"}
+if(inp.charAt(x)=="?"){out += "t"}
+if(inp.charAt(x)=="¿"){out += "u"}
+if(inp.charAt(x)=="+"){out += "v"}
+if(inp.charAt(x)=="*"){out += "w"}
+if(inp.charAt(x)=="~"){out += "x"}
+if(inp.charAt(x)=="'"){out += "y"}
+if(inp.charAt(x)=="¡"){out += "z"}
+if(inp.charAt(x)=="¨"){out += "1"}
+if(inp.charAt(x)=="["){out += "2"}
+if(inp.charAt(x)=="{"){out += "3"}
+if(inp.charAt(x)=="^"){out += "4"}
+if(inp.charAt(x)=="]"){out += "5"}
+if(inp.charAt(x)=="}"){out += "6"}
+if(inp.charAt(x)=="`"){out += "7"}
+if(inp.charAt(x)=="-"){out += "8"}
+if(inp.charAt(x)=="_"){out += "9"}
+if(inp.charAt(x)==":"){out += "0"}
+if(inp.charAt(x)=="ü"){out += "."}
+if(inp.charAt(x)==","){out += ","}
+if(inp.charAt(x)==':'){out += "-"}
+if(inp.charAt(x)=="<"){out += "%"}
+if(inp.charAt(x)==">"){out += "/"}
+if(inp.charAt(x)=='"'){out += ':'}
+if(inp.charAt(x)=="°"){out += '?'}
+if(inp.charAt(x)=="¬"){out += '¿'}
+if(inp.charAt(x)=="я"){out += '😀'}
+
+
+if(inp.charAt(x)==String.fromCharCode(32)){out += String.fromCharCode(32)}
+
+}
+document.getElementById("b").innerHTML = out;
+document.getElementById("ct").value = out;
+
+var kf = document.getElementById("kf").value;
+
+}
+
+var cod = setInterval(k,5);
+
+function copi() {
+ 
+ var ct = document.getElementById("ct") ;
+
+ ct.select();
+ ct.setSelectionRange(0, 99999); 
+
+
+ document.execCommand("copy");
+ 
+// alert("kk")
+
+}
+
+
+
+</script>
+
+</body>
+
+</html>
